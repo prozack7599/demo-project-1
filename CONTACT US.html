@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head><link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+<title>CONTACT US</title>
+</head>
+<body>
+  <!-- header-->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <div class="min-h-screen">
+      <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+          <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+              <div x-data="{ open: false}"
+                  class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                  <div class="flex flex-row items-center justify-between p-4">
+                      <a href="/index.html"
+                          class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">EVERYTHING
+                          FINANCE
+                      </a>
+                      <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                          @click="open = !open">
+                          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                              <path x-show="!open" fill-rule="evenodd"
+                                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                  clip-rule="evenodd"></path>
+                              <path x-show="open" fill-rule="evenodd"
+                                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"></path>
+                          </svg>
+                      </button>
+                  </div>
+                  <nav :class="{'flex': open, 'hidden': !open}"
+                      class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                      <div @click.away="open = false" class="relative" x-data="{ open: false}">
+                          <button @click="open = !open"
+                              class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                              <span>NEWS</span>
+                              <svg fill="currentColor" viewBox="0 0 20 20"
+                                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                  <path fill-rule="evenodd"
+                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                      clip-rule="evenodd"></path>
+                              </svg>
+                          </button>
+                          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                              x-transition:enter-start="transform opacity-0 scale-95"
+                              x-transition:enter-end="transform opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-75"
+                              x-transition:leave-start="transform opacity-100 scale-100"
+                              x-transition:leave-end="transform opacity-0 scale-95"
+                              class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+                              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/LATEST NEWS.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">LATEST NEWS</p>
+
+                                          </div>
+                                      </a>
+
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/GOVERMENT SCHEMES.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">GOVT SCHEMES</p>
+                                              <p class="text-sm">Check latest Govt schemes</p>
+                                          </div>
+                                      </a>
+
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="#">
+
+
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div @click.away="open = false" class="relative" x-data="{ open: false}">
+                          <button @click="open = !open"
+                              class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                              <span>BOOKS</span>
+                              <svg fill="currentColor" viewBox="0 0 20 20"
+                                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                  <path fill-rule="evenodd"
+                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                      clip-rule="evenodd"></path>
+                              </svg>
+                          </button>
+                          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                              x-transition:enter-start="transform opacity-0 scale-95"
+                              x-transition:enter-end="transform opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-75"
+                              x-transition:leave-start="transform opacity-100 scale-100"
+                              x-transition:leave-end="transform opacity-0 scale-95"
+                              class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+                              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/investment.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">INVESTMENT</p>
+
+                                          </div>
+                                      </a>
+
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/knowledge.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">KNOWLEDGE</p>
+
+                                          </div>
+                                      </a>
+
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div @click.away="open = false" class="relative" x-data="{ open: false}">
+                          <button @click="open = !open"
+                              class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                              <span>STOCK MARKET</span>
+                              <svg fill="currentColor" viewBox="0 0 20 20"
+                                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                  <path fill-rule="evenodd"
+                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                      clip-rule="evenodd"></path>
+                              </svg>
+                          </button>
+                          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                              x-transition:enter-start="transform opacity-0 scale-95"
+                              x-transition:enter-end="transform opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-75"
+                              x-transition:leave-start="transform opacity-100 scale-100"
+                              x-transition:leave-end="transform opacity-0 scale-95"
+                              class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+                              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/Nifty.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">NIFTY</p>
+
+                                          </div>
+                                      </a>
+
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/SENSEX.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">SENSEX</p>
+
+                                          </div>
+                                      </a>
+
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div @click.away="open = false" class="relative" x-data="{ open: false}">
+                          <button @click="open = !open"
+                              class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                              <span>CONTACT US</span>
+                              <svg fill="currentColor" viewBox="0 0 20 20"
+                                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                  <path fill-rule="evenodd"
+                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                      clip-rule="evenodd"></path>
+                              </svg>
+                          </button>
+                          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                              x-transition:enter-start="transform opacity-0 scale-95"
+                              x-transition:enter-end="transform opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-75"
+                              x-transition:leave-start="transform opacity-100 scale-100"
+                              x-transition:leave-end="transform opacity-0 scale-95"
+                              class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+                              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="CONTACT US.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">FEEDBACK</p>
+
+                                          </div>
+                                      </a>
+
+                                      <a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                          href="/work.html">
+                                          <div class="bg-teal-500 text-white rounded-lg p-3">
+                                              <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                                  class="md:h-6 md:w-6 h-4 w-4">
+                                                  <path
+                                                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                                  </path>
+                                              </svg>
+                                          </div>
+                                          <div class="ml-3">
+                                              <p class="font-semibold">WORK WITH US</p>
+
+                                          </div>
+                                      </a>
+
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </nav>
+              </div>
+          </div>
+      </div>
+  
+  <!-- header-->
+  <hr>
+  <br>
+  <!--main-->
+<section class="text-gray-700 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+   
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Name" type="text">
+        </div>
+        <div class="p-2 w-1/2">
+          <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2" placeholder="Email" type="email">
+        </div>
+        <div class="p-2 w-full">
+          <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block" placeholder="Message"></textarea>
+        </div>
+        <div class="p-2 w-full">
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">SEND</button>
+        </div>
+        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+          <a class="text-indigo-500">example@email.com</a>
+          <p class="leading-normal my-5">49 DELHI.
+            <br>INDIA
+          </p>
+          <span class="inline-flex">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--main-->
+<!-- footer-->
+<footer class="flex justify-center px-4 text-gray-100 bg-gray-800">
+    <div class="container py-6">
+        <h1 class="text-center text-lg font-bold lg:text-2xl">
+            Join us and never miss <br> out on news, tips and more.
+        </h1>
+
+        <div class="flex justify-center mt-6">
+            <div class="bg-white rounded-lg">
+                <div class="flex flex-wrap justify-between md:flex-row">
+                    <input type="email" class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none"
+                        placeholder="Enter your email">
+                    <button
+                        class="w-full m-1 p-2 text-sm bg-gray-800 rounded-lg font-semibold uppercase lg:w-auto">subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="h-px mt-6 bg-gray-700 border-none">
+
+        <div class="flex flex-col items-center justify-between mt-6 md:flex-row">
+            <div>
+                <a href="#" class="text-xl font-bold">EVERYTHING FINANCE</a>
+            </div>
+            <div class="flex mt-4 md:m-0">
+                <div class="-mx-4">
+                    <a href="#" class="px-4 text-sm">About</a>
+                    <a href="#" class="px-4 text-sm">Blog</a>
+                    <a href="#" class="px-4 text-sm">News</a>
+                    <a href="#" class="px-4 text-sm">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<!-- footer-->
+</body>
+</html>
